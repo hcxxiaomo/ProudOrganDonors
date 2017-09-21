@@ -5,17 +5,17 @@
 		"iPad"
 	],
 	"id": "H5416EEFE",/*必选，应用的标识*/
-	"name": "ProudOrganDonors",/*必选，应用名称*/
+	"name": "Proud Organ Donors",/*必选，应用名称*/
 	"version": {
-		"name": "1.0",/*必选，版本名称*/
+		"name": "1.01.0920",/*必选，版本名称*/
 		"code": ""
 	},
-	"description": "",/*可选，应用描述信息*/
+	"description": "Proud Organ Donors",/*可选，应用描述信息*/
 	"icons": {
 		"72": "icon.png"
 	},
-	"fullscreen": true,
-	"launch_path": "index.html",/*必选，应用的入口页面，默认为根目录下的index.html；也可以是网络地址，网络地址必须以http://或https://开头*/
+	"fullscreen": false,
+	"launch_path": "main/index2.html",/*必选，应用的入口页面，默认为根目录下的index.html；也可以是网络地址，网络地址必须以http://或https://开头*/
 	"developer": {
 		"email": "",/*可选，开发者名称*/
 		"name": "",/*可选，开发者邮箱地址*/
@@ -28,9 +28,7 @@
 		"Camera": {
 			"description": "访问摄像头"
 		},
-		"Device": {
-			"description": "访问设备信息"
-		},
+		
 		"Events": {
 			"description": "应用扩展事件"
 		},
@@ -105,19 +103,7 @@
 				"keystore": "",/*Android必选，打包证书文件*/
 				"password": "",/*Android必选，打包证书密码*/
 				"aliasname": "",/*Android必选，打包证书别名*/
-				"permissions": [
-					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
-					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
-					"<uses-feature android:name=\"android.hardware.camera\"/>",
-					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.CAMERA\"/>"
-				]
+				"permissions": ["<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>"]
 			},
 			"orientation": [
 				"portrait-primary",
@@ -184,9 +170,9 @@
 				"android": {
 					"mdpi": "", /*必选，240x282，普通屏启动图片*/
 					"ldpi": "", /*必选，320x442，大屏启动图片*/
-					"hdpi": "E:/mydocuments/work/Organ Donation Project/img/start_1.png", /*必选，480x762，高分屏启动图片*/
-					"xhdpi": "E:/mydocuments/work/Organ Donation Project/img/start_2.png", /*必选，720x1242，720P高分屏启动图片*/
-					"xxhdpi": "E:/mydocuments/work/Organ Donation Project/img/start_3.png"
+					"hdpi": "/Users/Stefan/Downloads/start_2_1.png", /*必选，480x762，高分屏启动图片*/
+					"xhdpi": "/Users/Stefan/Downloads/start_2_2.png", /*必选，720x1242，720P高分屏启动图片*/
+					"xxhdpi": "/Users/Stefan/Downloads/start_2_3.png"
 				}
 			}
 		}
@@ -1061,5 +1047,15 @@
 				"js/mui.picker.all.js"
 			]
 		}
-	}
+	},
+	"unpackage":[
+	  "css/mui.dtpicker.css",
+	  "css/mui.listpicker.css",
+	  "css/mui.picker.all.css",
+	  "examples/modals.html",
+	  "examples/tabbar-labels-only.html",
+	  "js/mui.dtpicker.js",
+	  "js/mui.listpicker.js",
+	  "js/mui.picker.all.js"
+	]
 }
