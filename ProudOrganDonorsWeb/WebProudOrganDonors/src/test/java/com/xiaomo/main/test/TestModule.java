@@ -1,4 +1,4 @@
-package com.xiaomo.main.module;
+package com.xiaomo.main.test;
 
 import java.util.Date;
 
@@ -25,37 +25,36 @@ import com.xiaoleilu.hutool.crypto.SecureUtil;
 import com.xiaoleilu.hutool.util.RandomUtil;
 import com.xiaoleilu.hutool.util.StrUtil;
 import com.xiaomo.main.bean.User;
-import com.xiaomo.main.service.UserService;
 
-@IocBean // 声明为Ioc容器中的一个Bean
-@At("/") // 整个模块的路径前缀
-@Ok("json:{locked:'password|salt',ignoreNull:true}") // 忽略password和salt属性,忽略空属性的json输出
-@Fail("http:500") // 抛出异常的话,就走500页面
-@Filters(@By(type=CheckSession.class, args={"me", "/"})) // 检查当前Session是否带me这个属性
-public class UserModule {
+//@IocBean // 声明为Ioc容器中的一个Bean
+//@At("/user") // 整个模块的路径前缀
+//@Ok("json:{locked:'password|salt',ignoreNull:true}") // 忽略password和salt属性,忽略空属性的json输出
+//@Fail("http:500") // 抛出异常的话,就走500页面
+//@Filters(@By(type=CheckSession.class, args={"me", "/"})) // 检查当前Session是否带me这个属性
+public class TestModule {
 
 	@Inject // 注入同名的一个ioc对象
     protected Dao dao;
-	
-	@Inject // 注入同名的一个ioc对象
-	protected UserService userService;
 
     @At
     public int count() { // 统计用户数的方法,算是个测试点
         return dao.count(User.class);
     }
-    
-    @At("/index")
-    @Ok("jsp:jsp.manager.login")
-    @Filters
-    public void loginIndex(){
-    	
-    }
 
     @At
     @Filters // 覆盖UserModule类的@Filter设置,因为登陆可不能要求是个已经登陆的Session
-    public Integer login(@Param("username")String name, @Param("password")String password, HttpSession session) {
-       return userService.login(name, password, session);
+    public Object login(@Param("username")String name, @Param("password")String password, HttpSession session) {
+        User user = dao.fetch(User.class, Cnd.where("name", "=", name));
+        
+        if (user == null) {
+            return false;
+        }
+        boolean equal = StrUtil.equals(SecureUtil.md5(password.trim().concat(user.getSalt())), user.getPassword());
+        if (!equal) {
+			return false;
+		}
+            session.setAttribute("me", user);
+            return true;
     }
 
     @At

@@ -21,7 +21,8 @@ public class MainSetup implements Setup {
 	        if (dao.count(User.class) == 0) {
 	            User user = new User();
 	            user.setName("admin");
-	            user.setPassword("123456");
+	            user.setPassword("a272670be8960ec9f7d1d2ba02a977b9");//admin@hk
+	            user.setSalt("apbb3v");
 	            user.setCreateTime(new Date());
 	            user.setUpdateTime(new Date());
 	            dao.insert(user);
