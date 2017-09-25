@@ -56,6 +56,7 @@
 <!--                                     </label> -->
 <!--                                 </div> -->
                                 <!-- Change this to a button or input when using this as a form -->
+                                <span id="info" style="color:red"></span>
                                 <button onclick="login()" class="btn btn-lg btn-success btn-block">Login</button>
                             </fieldset>
                         </form>
@@ -92,12 +93,11 @@
                     dataType:"json",
                     success: function(data) {
                         alert(data);
-//                         if (data == true) {
-//                             alert("登陆成功");
-//                             location.reload();
-//                         } else {
-//                             alert("登陆失败,请检查账号密码")
-//                         }
+                        if (data == 0) {
+                        	window.location.href= base + "/list";
+                        } else {
+                            $("#info").html("登陆失败,请检查账号和密码");
+                        }
                     }
                 });
                 return false;
