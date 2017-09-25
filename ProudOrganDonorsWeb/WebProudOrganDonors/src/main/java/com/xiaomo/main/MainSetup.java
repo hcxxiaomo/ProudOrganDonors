@@ -7,6 +7,8 @@ import org.nutz.ioc.Ioc;
 import org.nutz.mvc.NutConfig;
 import org.nutz.mvc.Setup;
 
+import com.xiaomo.main.bean.Data;
+import com.xiaomo.main.bean.Email;
 import com.xiaomo.main.bean.User;
 
 public class MainSetup implements Setup {
@@ -27,13 +29,8 @@ public class MainSetup implements Setup {
 	            user.setUpdateTime(new Date());
 	            dao.insert(user);
 	        }
-//	        dao.create(CarNumberInfo.class, false);
-//	        dao.create(PoliceInfo.class, false);
-//	        dao.create(NoticeInfo.class, false);
-//	        dao.create(PunishInfo.class, false);
-//	        dao.create(PunishTemplate.class, false);
-//	        dao.create(AreaInfo.class, false);
-//	        Daos.migration(dao,PunishTemplate.class, true, false);
+	        dao.create(Data.class, false);
+	        dao.create(Email.class, false);
 //	        Daos.migration(dao,PunishInfo.class, true, false);
 	}
 

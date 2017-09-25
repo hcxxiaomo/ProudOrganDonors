@@ -57,7 +57,7 @@
 <!--                                 </div> -->
                                 <!-- Change this to a button or input when using this as a form -->
                                 <span id="info" style="color:red"></span>
-                                <button onclick="login()" class="btn btn-lg btn-success btn-block">Login</button>
+                                <div onclick="login()" class="btn btn-lg btn-success btn-block">Login</div>
                             </fieldset>
                         </form>
                     </div>
@@ -92,7 +92,7 @@
                     },
                     dataType:"json",
                     success: function(data) {
-                        alert(data);
+//                         alert(data);
                         if (data == 0) {
                         	window.location.href= base + "/list";
                         } else {
@@ -100,7 +100,7 @@
                         }
                     }
                 });
-                return false;
+//                 return false;
 //             if (me != "null") {
 //                 $("#login_div").hide();
 //                 $("#userInfo").html("您的Id是" + me);

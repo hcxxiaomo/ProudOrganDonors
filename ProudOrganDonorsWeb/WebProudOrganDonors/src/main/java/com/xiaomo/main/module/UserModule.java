@@ -31,7 +31,7 @@ import com.xiaomo.main.service.UserService;
 @At("/") // 整个模块的路径前缀
 @Ok("json:{locked:'password|salt',ignoreNull:true}") // 忽略password和salt属性,忽略空属性的json输出
 @Fail("http:500") // 抛出异常的话,就走500页面
-@Filters(@By(type=CheckSession.class, args={"me", "/"})) // 检查当前Session是否带me这个属性
+@Filters(@By(type=CheckSession.class, args={"me", "/index"})) // 检查当前Session是否带me这个属性
 public class UserModule {
 
 	@Inject // 注入同名的一个ioc对象
