@@ -31,6 +31,8 @@
 
     <!-- Custom Fonts -->
     <link href="/WebProudOrganDonors/startbootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css"/>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,6 +85,15 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
+                 <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Visit <a href="https://www.codr.gov.hk/codr/CInternet.jsf" target="_blank"> CInternet.jsf </a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                        ${obj.connectUrlCount }
+                        </div>
+                
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Email Register Data
@@ -146,7 +157,9 @@
     <script src="/WebProudOrganDonors/startbootstrap/vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="/WebProudOrganDonors/startbootstrap/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
     <script src="/WebProudOrganDonors/startbootstrap/vendor/datatables-responsive/dataTables.responsive.js"></script>
-
+<script type="text/javascript" src="http://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="http://cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"  charset="UTF-8"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/WebProudOrganDonors/startbootstrap/dist/js/sb-admin-2.js"></script>
 
@@ -154,8 +167,18 @@
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-            responsive: true,
-            "order": []
+            responsive: true
+            ,"order": []
+        ,dom: 'Bfrtip',
+        buttons: [ {
+            extend: 'excelHtml5',
+            text:'Export Email',
+            filename:'Export_Email',
+            customize: function( xlsx ) {
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+//                    $('row c[r^="C"]', sheet).attr( 's', '2' );
+            }
+        } ]
         });
     });
     </script>
