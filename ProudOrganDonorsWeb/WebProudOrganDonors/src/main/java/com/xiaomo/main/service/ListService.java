@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
+import org.nutz.dao.Sqls;
+import org.nutz.dao.sql.Sql;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 
@@ -25,6 +27,11 @@ public class ListService {
 			return  data.getCount(); 
 		}
     }
+	
+	public void updateUrlCount(String name){
+		Sql sql = Sqls.create("update t_data set count = count + 1");//TODO String name 需要写进去
+	    dao.execute(sql);
+	}
 	
 	public List<Email> email(){
 		List<Email>  list = dao.query(Email.class, Cnd.orderBy().desc("id"));
