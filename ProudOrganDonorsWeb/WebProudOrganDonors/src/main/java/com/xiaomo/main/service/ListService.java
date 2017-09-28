@@ -29,7 +29,8 @@ public class ListService {
     }
 	
 	public void updateUrlCount(String name){
-		Sql sql = Sqls.create("update t_data set count = count + 1");//TODO String name 需要写进去
+		Sql sql = Sqls.create("update t_data set count = count + 1 where name = @name");
+		sql.params().set("name",name);
 	    dao.execute(sql);
 	}
 	
