@@ -32,8 +32,9 @@ public class ListModule {
    @At("/saveEmail")
    @Ok("json")
    @Filters
-	public Object saveEmail(String email){
-		return listService.saveEmail(email);
+	public NutMap saveEmail(String email){
+		listService.saveEmail(email);
+		return new NutMap().addv("save", "ok");
 	}
    
    @At("/updateConnectUrlCount")

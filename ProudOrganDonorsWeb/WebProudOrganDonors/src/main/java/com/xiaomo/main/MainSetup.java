@@ -30,6 +30,12 @@ public class MainSetup implements Setup {
 	            dao.insert(user);
 	        }
 	        dao.create(Data.class, false);
+	        if (dao.count(Data.class) == 0) {
+	        	Data data = new Data();
+	        	data.setCount(0);
+	        	data.setName("connectUrlCount");
+	        	dao.insert(data);
+	        }
 	        dao.create(Email.class, false);
 //	        Daos.migration(dao,PunishInfo.class, true, false);
 	}

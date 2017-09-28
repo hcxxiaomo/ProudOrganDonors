@@ -121,7 +121,7 @@
 				<div class="title" ></div>
 			</div>
 			<div id="tabbar-with-map" class="mui-control-content">
-				<div class="title"  style="font-size: 24px;line-height: 36px;"><a href="https://www.codr.gov.hk/codr/CInternet.jsf">按此</a>登錄衛生署中央器官損贈登記網頁</div>
+				<div class="title"  style="font-size: 24px;line-height: 36px;"><a onclick="count()" href="https://www.codr.gov.hk/codr/CInternet.jsf">按此</a>登錄衛生署中央器官損贈登記網頁</div>
 			</div>
 		</div>
 		
@@ -138,8 +138,32 @@
 				mui.prompt('請留下有效電郵地址', '', '參加幸運抽獎活動', btnArray, function(e) {
 					if (e.index == 1) {
 						console.info("yes");
-						//TODO 需要ajax调用，来进行数据
-						info.innerText = '電郵地址' + e.value +'提交成功';
+//						mui.post('http://localhost:8080/WebProudOrganDonors/saveEmail?email='+e.value,{},function(data){
+//							//服务器返回响应，根据响应结果，分析是否登录成功；
+//							console.info(data);
+//							//服务器返回响应，根据响应结果，分析是否登录成功；
+//									info.innerText = '電郵地址' + e.value +'提交成功';
+//							},'text'
+//						);
+						
+						mui.ajax('http://localhost:8080/WebProudOrganDonors/saveEmail?email='+e.value,{
+									email:e.value
+								,
+								dataType:'json',//服务器返回json格式数据
+								type:'post',//HTTP请求类型
+								timeout:10000,//超时时间设置为10秒；
+								headers:{'Content-Type':'application/x-www-form-urlencoded'},	              
+								success:function(data){
+									//服务器返回响应，根据响应结果，分析是否登录成功；
+									info.innerText = '電郵地址' + e.value +'提交成功';
+								},
+								error:function(xhr,type,errorThrown){
+									//异常处理；
+									console.log(type);
+									info.innerText = '网络连接错误'+type;
+								}
+							});
+						
 					} else {
 						console.info("no");
 						//info.innerText = '你点了取消按钮';
@@ -158,6 +182,12 @@
 			console.info("regist");
 			document.getElementById("title").innerText="現在登記";
 		}
-		
+		function count(){
+			mui.post('http://localhost:8080/WebProudOrganDonors/updateConnectUrlCount',{},function(data){
+					//服务器返回响应，根据响应结果，分析是否登录成功；
+					console.info(data);
+				},'json'
+				);
+		}
 	</script>
 </html>
