@@ -7,7 +7,7 @@
 	"id": "H5416EEFE",/*必选，应用的标识*/
 	"name": "Proud Organ Donors",/*必选，应用名称*/
 	"version": {
-		"name": "1.01.0920",/*必选，版本名称*/
+		"name": "1.01.0929",/*必选，版本名称*/
 		"code": ""
 	},
 	"description": "Proud Organ Donors",/*可选，应用描述信息*/

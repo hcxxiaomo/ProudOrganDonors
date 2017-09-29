@@ -121,7 +121,7 @@
 				<div class="title" ></div>
 			</div>
 			<div id="tabbar-with-map" class="mui-control-content">
-				<div class="title"  style="font-size: 24px;line-height: 36px;"><a href="https://www.codr.gov.hk/codr/CInternet.jsf">按此</a>登錄衛生署中央器官損贈登記網頁</div>
+				<div class="title"  style="font-size: 24px;line-height: 36px;"><a  onclick="count()" href="https://www.codr.gov.hk/codr/CInternet.jsf">按此</a>登錄衛生署中央器官損贈登記網頁</div>
 			</div>
 			<div id="tabbar-2-1" class="mui-control-content mui-active">
 				<div class="title">
@@ -140,33 +140,6 @@
 		mui.init({
 			swipeBack:true //启用右滑关闭功能
 		});
-		var info = document.getElementById("info");
-		document.getElementById("promptBtn").addEventListener('tap', function(e) {
-				e.detail.gesture.preventDefault(); //修复iOS 8.x平台存在的bug，使用plus.nativeUI.prompt会造成输入法闪一下又没了
-				var btnArray = ['取消', '确定'];
-				mui.prompt('請留下有效電郵地址', '', '參加幸運抽獎活動', btnArray, function(e) {
-					if (e.index == 1) {
-						console.info("yes");
-						//TODO 需要ajax调用，来进行数据
-						info.innerText = '電郵地址' + e.value +'提交成功';
-					} else {
-						console.info("no");
-						//info.innerText = '你点了取消按钮';
-					}
-				})
-			});
-		function index(){
-			console.info("index");
-			document.getElementById("title").innerText="器官捐贈資訊";
-		}
-		function share(){
-			console.info("share");
-			document.getElementById("title").innerText="故事分享";
-		}
-		function regist(){
-			console.info("regist");
-			document.getElementById("title").innerText="現在登記";
-		}
-		
 	</script>
+	<script src="../js/useful_pod.js"></script>
 </html>
