@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>支援器官捐贈</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+<!--				<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+-->		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.title{
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+	
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			.oa-contact-content {
+				width: 100%;
+			}
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			.oa-contact-name, oa-contact-position {
+				float: left;
+			}
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			.mui-popover {
+				height: 300px;
+			}
+			.mui-content {
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" id="title">李錦滔教授</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" onclick="index()"  href="#tabbar">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">器官捐贈資訊</span>
+			</a>
+			<!--<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">消息</span>
+			</a>-->
+			<a class="mui-tab-item " onclick="share()" href="#tabbar-with-contact" >
+				<span class="mui-icon mui-icon-compose" ></span>
+				<span class="mui-tab-label" >故事分享</span>
+			</a>
+			<a class="mui-tab-item"  onclick="regist()"  href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-personadd"></span>
+				<span class="mui-tab-label">現在登記</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content">
+				<ul class="mui-table-view" style="margin-top: 25px;">
+				<li class="mui-table-view-cell">
+					<a href="page2_1.html" class="mui-navigate-right">
+						「Proud Organ Donors」活動
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a  href="page2_2.html" class="mui-navigate-right">
+						器官捐贈資訊
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a  href="page2_3.html" class="mui-navigate-right">
+						故事分享 
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a  href="page2_4.html" class="mui-navigate-right">
+						參加「有器長存」比賽, 有「器」長存 
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id='promptBtn' class="mui-navigate-right">幸運抽獎</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a  href="page2_6.html" class="mui-navigate-right">
+						現在登記 
+					</a>
+				</li>
+
+			</ul>
+			<div id="info" style="margin: 5px;text-align: center;"></div>
+			</div>
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<div class="title" ></div>
+			</div>
+			<div id="tabbar-with-map" class="mui-control-content">
+				<div class="title"  style="font-size: 24px;line-height: 36px;"><a  onclick="count()" href="https://www.codr.gov.hk/codr/CInternet.jsf">按此</a>登錄衛生署中央器官損贈登記網頁</div>
+			</div>
+			<div id="tabbar-2-3-1" class="mui-control-content mui-active">
+								<video controls="controls" style="width: 100%;">
+  <source src="http://xiaomospace.qiniudn.com/lijingtaoRush.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+			</div>
+		</div>
+		
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
+	<script src="../js/useful_pod.js"></script>
+</html>

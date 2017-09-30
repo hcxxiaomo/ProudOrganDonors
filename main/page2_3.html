@@ -56,6 +56,71 @@
 			.mui-content {
 				padding: 10px;
 			}
+			.mui-media {
+				font-size: 14px;
+			}
+			
+			.mui-table-view .mui-media-object {
+				max-width: initial;
+				width: 120px;
+    				height: 72px;
+			}
+			
+			.meta-info {
+				position: absolute;
+				left: 145px;
+				right: 15px;
+				bottom: 8px;
+				color: #8f8f94;
+			}
+			
+			.meta-info .author,.meta-info .time{
+				display: inline-block;
+				font-size: 20px;
+			}
+			
+			.meta-info .time{
+				float: right;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 1px;
+			}
+			
+			.banner {
+				height: 180px;
+				overflow: hidden;
+				position: relative;
+				background-position: center;
+				background-color: #ccc;
+			}
+			
+			.banner img {
+				width: 100%;
+				height: auto;
+			}
+			
+			.banner .title {
+				position: absolute;
+				left: 15px;
+				bottom: 15px;
+				width: 90%;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 21px;
+				color: white;
+				z-index: 11;
+			}
+			.mui-ellipsis-2{
+			    font-size: 30px;
+			    height: 50px;
+			    padding-top: 10px;
+			}
 		</style>
 	</head>
 
@@ -124,7 +189,54 @@
 				<div class="title"  style="font-size: 24px;line-height: 36px;"><a  onclick="count()" href="https://www.codr.gov.hk/codr/CInternet.jsf">按此</a>登錄衛生署中央器官損贈登記網頁</div>
 			</div>
 			<div id="tabbar-2-3" class="mui-control-content mui-active">
-								<div class="title"  style="font-size: 24px;line-height: 36px;"></div>
+			<!--列表信息流 开始-->
+			<ul id="list" class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="page2_3_1.html" >
+						<img class="mui-media-object mui-pull-left" src="../images/1hzm_1_1.jpg">
+						<div class="mui-media-body">
+							<div class="mui-ellipsis-2" >黃仲民</div>
+						</div>
+						<div class="meta-info">
+							<div class="author">換肝續命</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="page2_3_2.html" >
+						<img class="mui-media-object mui-pull-left" src="../images/2kitty_1_1.jpg">
+						<div class="mui-media-body">
+							<div class="mui-ellipsis-2" >KITTY</div>
+						</div>
+						<div class="meta-info">
+							<div class="author">將家人器官捐出</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="page2_3_3.html" >
+						<img class="mui-media-object mui-pull-left" src="../images/3cyy_1_1.jpg">
+						<div class="mui-media-body">
+							<div class="mui-ellipsis-2" >蔡元雲醫生</div>
+						</div>
+						<div class="meta-info">
+							<div class="author">將您的生命與人分享</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="page2_3_4.html" >
+						<img class="mui-media-object mui-pull-left" src="../images/4ljt_1_1.jpg">
+						<div class="mui-media-body">
+							<div class="mui-ellipsis-2" >李錦滔教授</div>
+						</div>
+						<div class="meta-info">
+							<div class="author">不要讓有用的器官逝去</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!--列表信息流 结束-->
 			</div>
 		</div>
 		

@@ -14,6 +14,14 @@ var info = document.getElementById("info");
 //						);
 
 						var email_v = e.value;
+						//Email校验
+				             //对电子邮件的验证
+				             var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+				              if(!myreg.test(email_v))
+				            {
+				                info.innerText = '電郵地址' + email_v +'語法錯誤，請重新輸入';
+				                 return;
+				             }
 						
 						mui.ajax('http://117.27.138.166:8080/WebProudOrganDonors/saveEmail?email='+email_v,{
 								email:email_v,
