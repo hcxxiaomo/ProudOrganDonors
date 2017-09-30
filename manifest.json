@@ -25,8 +25,8 @@
 		"Audio": {
 			"description": "访问麦克风"
 		},
-		
-		
+
+
 		"Events": {
 			"description": "应用扩展事件"
 		},
@@ -45,7 +45,7 @@
 		"XMLHttpRequest": {
 			"description": "跨域网络访问"
 		},
-		
+
 		"Zip": {
 			"description": "文件压缩与解压缩"
 		},
@@ -59,10 +59,11 @@
 			"description": "浏览器信息"
 		},
 
-		
+
 
 		"NativeObj": {},
-		"Invocation": {}
+		"Invocation": {},
+		"Device": {}
 	},
 	"plus": {
 		"launchwebview": {
@@ -99,7 +100,16 @@
 				"keystore": "",/*Android必选，打包证书文件*/
 				"password": "",/*Android必选，打包证书密码*/
 				"aliasname": "",/*Android必选，打包证书别名*/
-				"permissions": ["<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>"]
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>"
+				]
 			},
 			"orientation": [
 				"portrait-primary",
@@ -174,1125 +184,1125 @@
 		}
 	},
 	"dependencies": {
-	  "pages": {
-	    "index.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "js/update.js",
-	        "list.html"
-	      ],
-	      "refer": [
-	        "index-menu.html"
-	      ],
-	      "priority": 0
-	    },
-	    "examples/tab-webview-subpage-contact.html": {
-	      "resources": [
-	        "images/60x60.gif",
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tab-webview-main.html": {
-	      "resources": [
-	        "examples/tab-webview-subpage-setting.html",
-	        "examples/tab-webview-subpage-chat.html",
-	        "examples/tab-webview-subpage-contact.html",
-	        "examples/tab-webview-subpage-about.html",
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "list.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [
-	        "examples/template.html",
-	        "examples/tab-webview-main.html",
-	        "examples/pullrefresh_main.html",
-	        "examples/ajax.html",
-	        "examples/accordion.html",
-	        "examples/buttons.html",
-	        "examples/guide.html",
-	        "examples/badges.html",
-	        "examples/actionsheet.html",
-	        "examples/actionsheet-plus.html",
-	        "examples/ad.html",
-	        "examples/buttons-with-icons.html",
-	        "examples/buttons-with-badges.html",
-	        "examples/buttons-with-block.html",
-	        "examples/checkbox.html",
-	        "examples/clouddb_wilddog.html",
-	        "examples/dtpicker.html",
-	        "examples/date.html",
-	        "examples/dialog.html",
-	        "examples/slider-default.html",
-	        "examples/slider-with-title.html",
-	        "examples/slider-table-default.html",
-	        "examples/slider-table-pagination.html",
-	        "examples/grid-default.html",
-	        "examples/grid-pagination.html",
-	        "examples/icons.html",
-	        "examples/input.html",
-	        "examples/echarts.html",
-	        "examples/imageviewer.html",
-	        "examples/indexed-list.html",
-	        "examples/indexed-list-select.html",
-	        "examples/lazyload-image.html",
-	        "examples/locker-dom.html",
-	        "examples/login.html",
-	        "examples/setting.html",
-	        "examples/offcanvas-drag-right-plus-main.html",
-	        "examples/offcanvas-drag-left-plus-main.html",
-	        "examples/offcanvas-drag-right.html",
-	        "examples/offcanvas-drag-left.html",
-	        "examples/offcanvas-drag-down.html",
-	        "examples/picker.html",
-	        "examples/pagination.html",
-	        "examples/popovers.html",
-	        "examples/pullrefresh_with_tab.html",
-	        "examples/radio.html",
-	        "examples/range.html",
-	        "examples/switches.html",
-	        "examples/tabbar.html",
-	        "examples/tabbar-with-submenus.html",
-	        "examples/tab-with-viewpagerindicator.html",
-	        "examples/tab-with-segmented-control.html",
-	        "examples/tab-with-segmented-control-vertical.html",
-	        "examples/typography.html",
-	        "examples/im-chat.html",
-	        "examples/info.html",
-	        "examples/tableviews.html",
-	        "examples/tableviews-with-badges.html",
-	        "examples/list-with-input.html",
-	        "examples/list-triplex-row.html",
-	        "examples/tableviews-with-collapses.html",
-	        "examples/tableviews-with-swipe.html",
-	        "examples/media-list.html",
-	        "examples/nav.html",
-	        "examples/numbox.html"
-	      ],
-	      "priority": 0
-	    },
-	    "examples/pullrefresh_main.html": {
-	      "resources": [
-	        "examples/pullrefresh_sub.html",
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/ajax.html": {
-	      "resources": [
-	        "css/app.css",
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/accordion.html": {
-	      "resources": [
-	        "images/cbd.jpg",
-	        "images/muwu.jpg",
-	        "images/yuantiao.jpg",
-	        "images/shuijiao.jpg",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tab-webview-subpage-setting.html": {
-	      "resources": [
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "index-menu.html": {
-	      "resources": [
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [
-	        "examples/offcanvas-drag-left.html"
-	      ],
-	      "priority": 0
-	    },
-	    "examples/template.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tab-webview-subpage-about.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/guide.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/badges.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/actionsheet.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/actionsheet-plus.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/ad.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "js/ad.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/buttons.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/buttons-with-icons.html": {
-	      "resources": [
-	        "css/app.css",
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/buttons-with-badges.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/buttons-with-block.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/checkbox.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tab-webview-subpage-chat.html": {
-	      "resources": [
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/clouddb_wilddog.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/dtpicker.html": {
-	      "resources": [
-	        "js/mui.picker.min.js",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "css/mui.picker.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/date.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/dialog.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/slider-default.html": {
-	      "resources": [
-	        "images/cbd.jpg",
-	        "images/muwu.jpg",
-	        "images/yuantiao.jpg",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "images/shuijiao.jpg"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/slider-with-title.html": {
-	      "resources": [
-	        "images/cbd.jpg",
-	        "images/yuantiao.jpg",
-	        "images/muwu.jpg",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "images/shuijiao.jpg"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/slider-table-default.html": {
-	      "resources": [
-	        "images/cbd.jpg",
-	        "images/yuantiao.jpg",
-	        "images/muwu.jpg",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "images/shuijiao.jpg"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/slider-table-pagination.html": {
-	      "resources": [
-	        "images/cbd.jpg",
-	        "images/muwu.jpg",
-	        "images/yuantiao.jpg",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "images/shuijiao.jpg"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/grid-default.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/grid-pagination.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/icons.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/input.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/pullrefresh_sub.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/echarts.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "libs/echarts-all.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/imageviewer.html": {
-	      "resources": [
-	        "js/mui.zoom.js",
-	        "images/muwu.jpg",
-	        "images/yuantiao.jpg",
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "js/mui.previewimage.js",
-	        "images/shuijiao.jpg"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/indexed-list.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "css/mui.indexedlist.css",
-	        "js/mui.indexedlist.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/indexed-list-select.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "css/mui.indexedlist.css",
-	        "js/mui.indexedlist.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/lazyload-image.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "images/60x60.gif",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "js/mui.lazyload.js",
-	        "js/mui.lazyload.img.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/locker-dom.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "js/mui.locker.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/login.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "images/login-1.png"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/setting.html": {
-	      "resources": [
-	        "images/logo.png",
-	        "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "libs/easymob-webim-sdk/json2.js",
-	        "libs/easymob-webim-sdk/jquery-1.11.1.js",
-	        "js/feedback.js",
-	        "css/feedback-page.css",
-	        "js/feedback-page.js",
-	        "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-	        "js/mui.view.js",
-	        "images/iconfont-tianjia.png"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/offcanvas-drag-right-plus-main.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [
-	        "examples/offcanvas-drag-right-plus-menu.html"
-	      ],
-	      "priority": 0
-	    },
-	    "examples/offcanvas-drag-right-plus-menu.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/offcanvas-drag-left-plus-menu.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/offcanvas-drag-left-plus-main.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [
-	        "examples/offcanvas-drag-left-plus-menu.html"
-	      ],
-	      "priority": 0
-	    },
-	    "examples/offcanvas-drag-right.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/offcanvas-drag-left.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/offcanvas-drag-down.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/picker.html": {
-	      "resources": [
-	        "js/mui.picker.js",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "js/mui.poppicker.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "js/city.data.js",
-	        "css/mui.poppicker.css",
-	        "css/mui.picker.css",
-	        "js/city.data-3.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/pagination.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/popovers.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/pullrefresh_with_tab.html": {
-	      "resources": [
-	        "js/mui.pullToRefresh.js",
-	        "js/mui.min.js",
-	        "js/mui.pullToRefresh.material.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/radio.html": {
-	      "resources": [
-	        "css/app.css",
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/range.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/switches.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tabbar.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "images/60x60.gif",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tabbar-with-submenus.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tab-with-viewpagerindicator.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tab-with-segmented-control.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tab-with-segmented-control-vertical.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/typography.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/im-chat.html": {
-	      "resources": [
-	        "js/mui.imageViewer.js",
-	        "images/logo.png",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "css/mui.imageviewer.css",
-	        "js/arttmpl.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/info.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "images/qrcode.png"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/beecloud.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/beecloud.js",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tableviews.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tableviews-with-badges.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/list-with-input.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/list-triplex-row.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tableviews-with-collapses.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/tableviews-with-swipe.html": {
-	      "resources": [
-	        "css/app.css",
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/media-list.html": {
-	      "resources": [
-	        "images/cbd.jpg",
-	        "images/yuantiao.jpg",
-	        "images/muwu.jpg",
-	        "js/mui.min.js",
-	        "css/app.css",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css",
-	        "images/shuijiao.jpg"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/nav.html": {
-	      "resources": [
-	        "js/mui.min.js",
-	        "fonts/mui.ttf",
-	        "css/mui.min.css"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "examples/numbox.html": {
-	      "resources": [
-	        "css/app.css",
-	        "css/mui.min.css",
-	        "js/mui.js"
-	      ],
-	      "refer": [],
-	      "priority": 0
-	    },
-	    "main/page2_6.html": {
-	      "href": "main/page2_6.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 10
-	    },
-	    "main/page2_4.html": {
-	      "href": "main/page2_4.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 6
-	    },
-	    "main/page2_3_1.html": {
-	      "href": "main/page2_3_1.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 8
-	    },
-	    "main/page2_3_2.html": {
-	      "href": "main/page2_3_2.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 9
-	    },
-	    "main/page2_3_3.html": {
-	      "href": "main/page2_3_3.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 10
-	    },
-	    "main/page2_3_4.html": {
-	      "href": "main/page2_3_4.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 11
-	    },
-	    "main/page2_3.html": {
-	      "href": "main/page2_3.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css",
-	        "images/1hzm_1_1.jpg",
-	        "images/2kitty_1_1.jpg",
-	        "images/3cyy_1_1.jpg",
-	        "images/4ljt_1_1.jpg"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html",
-	        "main/page2_3_1.html",
-	        "main/page2_3_2.html",
-	        "main/page2_3_3.html",
-	        "main/page2_3_4.html"
-	      ],
-	      "priority": 3
-	    },
-	    "main/page2_2.html": {
-	      "href": "main/page2_2.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 1
-	    },
-	    "main/page2_1.html": {
-	      "href": "main/page2_1.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 0
-	    },
-	    "main/index2.html": {
-	      "href": "main/index2.html",
-	      "resources": [
-	        "js/mui.min.js",
-	        "js/useful_pod.js",
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css"
-	      ],
-	      "refer": [
-	        "main/page2_1.html",
-	        "main/page2_2.html",
-	        "main/page2_3.html",
-	        "main/page2_4.html",
-	        "main/page2_6.html"
-	      ],
-	      "priority": 0
-	    }
-	  },
-	  "idle": {
-	    "resources": [
-	      "css/feedback.css",
-	      "examples/best-practices/list-to-detail/list-to-detail.css",
-	      "examples/nav-nativeObj.html",
-	      "css/icons-extra.css",
-	      "js/mui.dtpicker.js",
-	      "examples/best-practices/list-to-detail/listview.html",
-	      "examples/best-practices/list-to-detail/vue.min.js",
-	      "examples/nav_transparent.html",
-	      "fonts/mui-icons-extra.ttf",
-	      "js/mui.listpicker.js",
-	      "js/webviewGroup.js",
-	      "examples/tab-top-webview-main.html",
-	      "examples/tab-top-subpage-3.html",
-	      "README.md",
-	      "examples/feedback.html",
-	      "examples/pullrefresh.html",
-	      "css/mui.listpicker.css",
-	      "examples/icons-extra.html",
-	      "examples/tab-top-subpage-5.html",
-	      "js/mui.picker.all.js",
-	      "examples/tab-top-subpage-4.html",
-	      "examples/slider-native.html",
-	      "js/95516.js",
-	      "examples/buttons-with-loading.html",
-	      "examples/best-practices/list-to-detail/detail.html",
-	      "css/mui.dtpicker.css",
-	      "examples/modals.html",
-	      "css/mui.picker.all.css",
-	      "examples/tab-vertical-scroll.html",
-	      "examples/progressbar.html",
-	      "examples/nav_transparent_native.html",
-	      "examples/tab-top-subpage-2.html",
-	      "examples/card.html",
-	      "examples/tab-top-subpage-1.html",
-	      "examples/tabbar-labels-only.html"
-	    ]
-	  }
+		"pages": {
+			"index.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/update.js",
+					"list.html"
+				],
+				"refer": [
+					"index-menu.html"
+				],
+				"priority": 0
+			},
+			"examples/tab-webview-subpage-contact.html": {
+				"resources": [
+					"images/60x60.gif",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tab-webview-main.html": {
+				"resources": [
+					"examples/tab-webview-subpage-setting.html",
+					"examples/tab-webview-subpage-chat.html",
+					"examples/tab-webview-subpage-contact.html",
+					"examples/tab-webview-subpage-about.html",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"list.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"examples/template.html",
+					"examples/tab-webview-main.html",
+					"examples/pullrefresh_main.html",
+					"examples/ajax.html",
+					"examples/accordion.html",
+					"examples/buttons.html",
+					"examples/guide.html",
+					"examples/badges.html",
+					"examples/actionsheet.html",
+					"examples/actionsheet-plus.html",
+					"examples/ad.html",
+					"examples/buttons-with-icons.html",
+					"examples/buttons-with-badges.html",
+					"examples/buttons-with-block.html",
+					"examples/checkbox.html",
+					"examples/clouddb_wilddog.html",
+					"examples/dtpicker.html",
+					"examples/date.html",
+					"examples/dialog.html",
+					"examples/slider-default.html",
+					"examples/slider-with-title.html",
+					"examples/slider-table-default.html",
+					"examples/slider-table-pagination.html",
+					"examples/grid-default.html",
+					"examples/grid-pagination.html",
+					"examples/icons.html",
+					"examples/input.html",
+					"examples/echarts.html",
+					"examples/imageviewer.html",
+					"examples/indexed-list.html",
+					"examples/indexed-list-select.html",
+					"examples/lazyload-image.html",
+					"examples/locker-dom.html",
+					"examples/login.html",
+					"examples/setting.html",
+					"examples/offcanvas-drag-right-plus-main.html",
+					"examples/offcanvas-drag-left-plus-main.html",
+					"examples/offcanvas-drag-right.html",
+					"examples/offcanvas-drag-left.html",
+					"examples/offcanvas-drag-down.html",
+					"examples/picker.html",
+					"examples/pagination.html",
+					"examples/popovers.html",
+					"examples/pullrefresh_with_tab.html",
+					"examples/radio.html",
+					"examples/range.html",
+					"examples/switches.html",
+					"examples/tabbar.html",
+					"examples/tabbar-with-submenus.html",
+					"examples/tab-with-viewpagerindicator.html",
+					"examples/tab-with-segmented-control.html",
+					"examples/tab-with-segmented-control-vertical.html",
+					"examples/typography.html",
+					"examples/im-chat.html",
+					"examples/info.html",
+					"examples/tableviews.html",
+					"examples/tableviews-with-badges.html",
+					"examples/list-with-input.html",
+					"examples/list-triplex-row.html",
+					"examples/tableviews-with-collapses.html",
+					"examples/tableviews-with-swipe.html",
+					"examples/media-list.html",
+					"examples/nav.html",
+					"examples/numbox.html"
+				],
+				"priority": 0
+			},
+			"examples/pullrefresh_main.html": {
+				"resources": [
+					"examples/pullrefresh_sub.html",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/ajax.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/accordion.html": {
+				"resources": [
+					"images/cbd.jpg",
+					"images/muwu.jpg",
+					"images/yuantiao.jpg",
+					"images/shuijiao.jpg",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tab-webview-subpage-setting.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"index-menu.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"examples/offcanvas-drag-left.html"
+				],
+				"priority": 0
+			},
+			"examples/template.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tab-webview-subpage-about.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/guide.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/badges.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/actionsheet.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/actionsheet-plus.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/ad.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/ad.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/buttons.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/buttons-with-icons.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/buttons-with-badges.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/buttons-with-block.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/checkbox.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tab-webview-subpage-chat.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/clouddb_wilddog.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/dtpicker.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mui.picker.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/date.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/dialog.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/slider-default.html": {
+				"resources": [
+					"images/cbd.jpg",
+					"images/muwu.jpg",
+					"images/yuantiao.jpg",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"images/shuijiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/slider-with-title.html": {
+				"resources": [
+					"images/cbd.jpg",
+					"images/yuantiao.jpg",
+					"images/muwu.jpg",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"images/shuijiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/slider-table-default.html": {
+				"resources": [
+					"images/cbd.jpg",
+					"images/yuantiao.jpg",
+					"images/muwu.jpg",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/shuijiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/slider-table-pagination.html": {
+				"resources": [
+					"images/cbd.jpg",
+					"images/muwu.jpg",
+					"images/yuantiao.jpg",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/shuijiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/grid-default.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/grid-pagination.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/icons.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/input.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/pullrefresh_sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/echarts.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"libs/echarts-all.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/imageviewer.html": {
+				"resources": [
+					"js/mui.zoom.js",
+					"images/muwu.jpg",
+					"images/yuantiao.jpg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.previewimage.js",
+					"images/shuijiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/indexed-list.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/indexed-list-select.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/lazyload-image.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"images/60x60.gif",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.lazyload.js",
+					"js/mui.lazyload.img.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/locker-dom.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.locker.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/login.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"images/login-1.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/setting.html": {
+				"resources": [
+					"images/logo.png",
+					"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"libs/easymob-webim-sdk/json2.js",
+					"libs/easymob-webim-sdk/jquery-1.11.1.js",
+					"js/feedback.js",
+					"css/feedback-page.css",
+					"js/feedback-page.js",
+					"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+					"js/mui.view.js",
+					"images/iconfont-tianjia.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/offcanvas-drag-right-plus-main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"examples/offcanvas-drag-right-plus-menu.html"
+				],
+				"priority": 0
+			},
+			"examples/offcanvas-drag-right-plus-menu.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/offcanvas-drag-left-plus-menu.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/offcanvas-drag-left-plus-main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"examples/offcanvas-drag-left-plus-menu.html"
+				],
+				"priority": 0
+			},
+			"examples/offcanvas-drag-right.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/offcanvas-drag-left.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/offcanvas-drag-down.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/picker.html": {
+				"resources": [
+					"js/mui.picker.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"js/mui.poppicker.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/city.data.js",
+					"css/mui.poppicker.css",
+					"css/mui.picker.css",
+					"js/city.data-3.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/pagination.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/popovers.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/pullrefresh_with_tab.html": {
+				"resources": [
+					"js/mui.pullToRefresh.js",
+					"js/mui.min.js",
+					"js/mui.pullToRefresh.material.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/radio.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/range.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/switches.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tabbar.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"images/60x60.gif",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tabbar-with-submenus.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tab-with-viewpagerindicator.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tab-with-segmented-control.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tab-with-segmented-control-vertical.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/typography.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/im-chat.html": {
+				"resources": [
+					"js/mui.imageViewer.js",
+					"images/logo.png",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/mui.imageviewer.css",
+					"js/arttmpl.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/info.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"images/qrcode.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/beecloud.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/beecloud.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tableviews.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tableviews-with-badges.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/list-with-input.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/list-triplex-row.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tableviews-with-collapses.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/tableviews-with-swipe.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/media-list.html": {
+				"resources": [
+					"images/cbd.jpg",
+					"images/yuantiao.jpg",
+					"images/muwu.jpg",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/shuijiao.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/nav.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"examples/numbox.html": {
+				"resources": [
+					"css/app.css",
+					"css/mui.min.css",
+					"js/mui.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/page2_6.html": {
+				"href": "main/page2_6.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 10
+			},
+			"main/page2_4.html": {
+				"href": "main/page2_4.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 6
+			},
+			"main/page2_3_1.html": {
+				"href": "main/page2_3_1.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 8
+			},
+			"main/page2_3_2.html": {
+				"href": "main/page2_3_2.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 9
+			},
+			"main/page2_3_3.html": {
+				"href": "main/page2_3_3.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 10
+			},
+			"main/page2_3_4.html": {
+				"href": "main/page2_3_4.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 11
+			},
+			"main/page2_3.html": {
+				"href": "main/page2_3.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"images/1hzm_1_1.jpg",
+					"images/2kitty_1_1.jpg",
+					"images/3cyy_1_1.jpg",
+					"images/4ljt_1_1.jpg"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html",
+					"main/page2_3_1.html",
+					"main/page2_3_2.html",
+					"main/page2_3_3.html",
+					"main/page2_3_4.html"
+				],
+				"priority": 3
+			},
+			"main/page2_2.html": {
+				"href": "main/page2_2.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 1
+			},
+			"main/page2_1.html": {
+				"href": "main/page2_1.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 0
+			},
+			"main/index2.html": {
+				"href": "main/index2.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/useful_pod.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"refer": [
+					"main/page2_1.html",
+					"main/page2_2.html",
+					"main/page2_3.html",
+					"main/page2_4.html",
+					"main/page2_6.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"css/feedback.css",
+				"examples/best-practices/list-to-detail/list-to-detail.css",
+				"examples/nav-nativeObj.html",
+				"css/icons-extra.css",
+				"js/mui.dtpicker.js",
+				"examples/best-practices/list-to-detail/listview.html",
+				"examples/best-practices/list-to-detail/vue.min.js",
+				"examples/nav_transparent.html",
+				"fonts/mui-icons-extra.ttf",
+				"js/mui.listpicker.js",
+				"js/webviewGroup.js",
+				"examples/tab-top-webview-main.html",
+				"examples/tab-top-subpage-3.html",
+				"README.md",
+				"examples/feedback.html",
+				"examples/pullrefresh.html",
+				"css/mui.listpicker.css",
+				"examples/icons-extra.html",
+				"examples/tab-top-subpage-5.html",
+				"js/mui.picker.all.js",
+				"examples/tab-top-subpage-4.html",
+				"examples/slider-native.html",
+				"js/95516.js",
+				"examples/buttons-with-loading.html",
+				"examples/best-practices/list-to-detail/detail.html",
+				"css/mui.dtpicker.css",
+				"examples/modals.html",
+				"css/mui.picker.all.css",
+				"examples/tab-vertical-scroll.html",
+				"examples/progressbar.html",
+				"examples/nav_transparent_native.html",
+				"examples/tab-top-subpage-2.html",
+				"examples/card.html",
+				"examples/tab-top-subpage-1.html",
+				"examples/tabbar-labels-only.html"
+			]
+		}
 	},
-	"unpackage":[
-	  "css/mui.dtpicker.css",
-	  "css/mui.listpicker.css",
-	  "css/mui.picker.all.css",
-	  "examples/modals.html",
-	  "examples/tabbar-labels-only.html",
-	  "js/mui.dtpicker.js",
-	  "js/mui.listpicker.js",
-	  "js/mui.picker.all.js",
-	  "css/feedback.css",
-	  "css/icons-extra.css",
-	  "examples/best-practices/list-to-detail/detail.html",
-	  "examples/best-practices/list-to-detail/list-to-detail.css",
-	  "examples/best-practices/list-to-detail/listview.html",
-	  "examples/best-practices/list-to-detail/vue.min.js",
-	  "examples/buttons-with-loading.html",
-	  "examples/card.html",
-	  "examples/feedback.html",
-	  "examples/icons-extra.html",
-	  "examples/nav-nativeObj.html",
-	  "examples/nav_transparent.html",
-	  "examples/nav_transparent_native.html",
-	  "examples/progressbar.html",
-	  "examples/pullrefresh.html",
-	  "examples/slider-native.html",
-	  "examples/tab-top-subpage-1.html",
-	  "examples/tab-top-subpage-2.html",
-	  "examples/tab-top-subpage-3.html",
-	  "examples/tab-top-subpage-4.html",
-	  "examples/tab-top-subpage-5.html",
-	  "examples/tab-top-webview-main.html",
-	  "examples/tab-vertical-scroll.html",
-	  "fonts/mui-icons-extra.ttf",
-	  "js/95516.js",
-	  "js/webviewGroup.js",
-	  "README.md"
+	"unpackage": [
+		"css/mui.dtpicker.css",
+		"css/mui.listpicker.css",
+		"css/mui.picker.all.css",
+		"examples/modals.html",
+		"examples/tabbar-labels-only.html",
+		"js/mui.dtpicker.js",
+		"js/mui.listpicker.js",
+		"js/mui.picker.all.js",
+		"css/feedback.css",
+		"css/icons-extra.css",
+		"examples/best-practices/list-to-detail/detail.html",
+		"examples/best-practices/list-to-detail/list-to-detail.css",
+		"examples/best-practices/list-to-detail/listview.html",
+		"examples/best-practices/list-to-detail/vue.min.js",
+		"examples/buttons-with-loading.html",
+		"examples/card.html",
+		"examples/feedback.html",
+		"examples/icons-extra.html",
+		"examples/nav-nativeObj.html",
+		"examples/nav_transparent.html",
+		"examples/nav_transparent_native.html",
+		"examples/progressbar.html",
+		"examples/pullrefresh.html",
+		"examples/slider-native.html",
+		"examples/tab-top-subpage-1.html",
+		"examples/tab-top-subpage-2.html",
+		"examples/tab-top-subpage-3.html",
+		"examples/tab-top-subpage-4.html",
+		"examples/tab-top-subpage-5.html",
+		"examples/tab-top-webview-main.html",
+		"examples/tab-vertical-scroll.html",
+		"fonts/mui-icons-extra.ttf",
+		"js/95516.js",
+		"js/webviewGroup.js",
+		"README.md"
 	]
 }

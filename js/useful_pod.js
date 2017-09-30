@@ -1,3 +1,29 @@
+	mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+mui.back = function(){
+	var btn = ["取消","確定"];  
+	mui.confirm('確認退出程序？','提示',btn,function(e){
+	if(e.index==1){
+	//mui.currentWebview.close();  
+	 plus.runtime.quit(); 
+	}
+});
+}
+
+mui.plusReady(function(){  
+                mui.back = function(){  
+                var btn = ["取消","確定"];  
+                mui.confirm('確認退出程序？','提示',btn,function(e){  
+                    if(e.index==1){  
+                      //mui.currentWebview.close();  
+                      plus.runtime.quit();  
+                    }  
+                });  
+            }  
+  
+            })  
+
 var info = document.getElementById("info");
 		document.getElementById("promptBtn").addEventListener('tap', function(e) {
 				e.detail.gesture.preventDefault(); //修复iOS 8.x平台存在的bug，使用plus.nativeUI.prompt会造成输入法闪一下又没了
