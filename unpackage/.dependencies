@@ -1,189 +1,62 @@
 {
   "main/page2_6.html": {
     "href": "main/page2_6.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 10
   },
   "main/page2_4.html": {
     "href": "main/page2_4.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 6
   },
   "main/page2_3_1.html": {
     "href": "main/page2_3_1.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 8
   },
   "main/page2_3_2.html": {
     "href": "main/page2_3_2.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 9
   },
   "main/page2_3_3.html": {
     "href": "main/page2_3_3.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 10
   },
   "main/page2_3_4.html": {
     "href": "main/page2_3_4.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 11
   },
   "main/page2_3.html": {
     "href": "main/page2_3.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css",
-      "images/1hzm_1_1.jpg",
-      "images/2kitty_1_1.jpg",
-      "images/3cyy_1_1.jpg",
-      "images/4ljt_1_1.jpg"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html",
-      "main/page2_3_1.html",
-      "main/page2_3_2.html",
-      "main/page2_3_3.html",
-      "main/page2_3_4.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 3
   },
   "main/page2_2.html": {
     "href": "main/page2_2.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 1
   },
   "main/page2_1.html": {
     "href": "main/page2_1.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 0
   },
   "main/index2.html": {
     "href": "main/index2.html",
-    "resources": [
-      "js/mui.min.js",
-      "js/useful_pod.js",
-      "css/mui.min.css",
-      "css/app.css"
-    ],
-    "refer": [
-      "main/page2_1.html",
-      "main/page2_2.html",
-      "main/page2_3.html",
-      "main/page2_4.html",
-      "main/page2_6.html"
-    ],
+    "resources": [],
+    "refer": [],
     "priority": 0
   }
 }

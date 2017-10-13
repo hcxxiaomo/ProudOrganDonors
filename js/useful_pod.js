@@ -49,7 +49,7 @@ var info = document.getElementById("info");
 				                 return;
 				             }
 						
-						mui.ajax('http://117.27.138.166:8080/WebProudOrganDonors/saveEmail?email='+email_v,{
+						mui.ajax('http://13.229.98.225:8080/WebProudOrganDonors/saveEmail?email='+email_v,{
 								email:email_v,
 								dataType:'json',//服务器返回json格式数据
 								type:'post',//HTTP请求类型
@@ -86,7 +86,7 @@ var info = document.getElementById("info");
 			document.getElementById("title").innerText="現在登記";
 		}
 		function count(){
-			mui.post('http://117.27.138.166:8080/WebProudOrganDonors/updateConnectUrlCount',{},function(data){
+			mui.post('http://13.229.98.225:8080/WebProudOrganDonors/updateConnectUrlCount',{},function(data){
 					//服务器返回响应，根据响应结果，分析是否登录成功；
 					console.info(data);
 				},'json'
